@@ -1,0 +1,17 @@
+/*
+•   Daemon
+•   In multitasking computer operating systems, a daemon is a computer program that runs as a background process rather than being under the direct control of an interactive user.
+    A daemon (pronounced DEE-muhn) is a program that runs continuously and exists for the purpose of handling periodic service requests that a computer system expects to receive.
+    The daemon program forwards the requests to other programs (or processes) as appropriate.
+    Each server of pages on the Web has an HTTPD or Hypertext Transfer Protocol daemon that continually waits for requests to come in from Web clients and their users.
+*/
+
+/*
+•   mongod is the "Mongo Daemon" it's basically the host process for the database.
+    When you start mongod you're basically saying "start the MongoDB process and run it in the background.
+    mongod has several default parameters, such as storing data in /data/db and running on port 27017
+
+•   mongo is the command-line shell that connects to a specific instance of mongod.
+    When you run mongo with no parameters it defaults to connecting to the localhost on port 27017.
+    If you run mongo against an invalid machine:port combination then it will fail to connect.
+*/

@@ -1,0 +1,75 @@
+
+show dbs
+use arry
+show collections
+
+db.<...?>.insert({ })                               // deprecated
+
+db.items.insertOne({
+    name: "iphone 13 pro max",
+    price: 5000,
+    rating: 9.1,
+    sold: 43
+})
+
+db.items.insertMany([
+    {
+        name: "iphone 13 pro max",
+        price: 70000,
+        rating: 9.1,
+        sold: 43
+    },
+    {
+        name: "nothing ph 1",
+        price: 40000,
+        rating: 9.5,
+        sold: 2
+    },
+    {
+        name: "poco f4",
+        price: 30000,
+        rating: 4.5,
+        sold: 33
+    },
+    {
+        name: "poco f4",
+        price: 30000,
+        rating: 4.5,
+        sold: 33
+    }
+    
+])
+
+
+
+
+db.items.find()
+
+db.items.find({ price: 30000, sold: 30000 })
+
+db.items.find({ rating: {$gte: 4.5} })
+db.items.find({ rating: {$gt: 4.5} })
+
+db.items.find({rating: {$gt:4.5}, price: {$lt: 50000}})
+
+db.items.find({ $or: [ {rating: {$gt:4.5}}, {price: {$lt: 50000}} ] })
+
+db.items.find({}, {rating: 1})
+db.items.find({ rating: {$gt: 4.5} }, {rating: 1})
+db.items.find({ rating: {$gt: 4.5} }, {rating: 1 , price: 1})
+
+
+
+
+db.items.deleteOne({price: {$gt: 50000}})
+
+db.items.deleteMany({price: {$gt: 50000}})
+
+db.inventory.deleteMany({})
+
+
+
+
+db.items.updateOne({name: "poco f4"}, {$set: {price: 2}})
+
+db.items.updateMany({name: "poco f4"}, {$set: {price: 2, rating: 0.5}})

@@ -1,0 +1,5 @@
+• C:\Program Files\MongoDB
+• C:\Users\Arijit\AppData\Local\mongodb
+• C:\Users\Arijit\AppData\Local\MongoDBCompass
+• C:\data\db
+• 
