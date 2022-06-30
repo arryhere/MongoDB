@@ -1,1 +1,2 @@
 # MongoDB
+free to use :)
