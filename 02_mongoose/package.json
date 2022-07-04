@@ -1,0 +1,19 @@
+{
+  "name": "02_mongoose",
+  "version": "1.0.0",
+  "description": "mongoose tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github/arryhere/mongodb"
+  },
+  "author": "arryhere",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.4.2"
+  }
+}
