@@ -65,7 +65,7 @@ db.items.deleteOne({price: {$gt: 50000}})
 
 db.items.deleteMany({price: {$gt: 50000}})
 
-db.inventory.deleteMany({})
+db.item.deleteMany({})
 
 
 
