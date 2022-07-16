@@ -3,16 +3,16 @@ show dbs
 use arry
 show collections
 
-db.<...?>.insert({ })                               // deprecated
+db.<collections>.insert({ })                               // deprecated
 
-db.items.insertOne({
+db.<collections>.insertOne({
     name: "iphone 13 pro max",
     price: 5000,
     rating: 9.1,
     sold: 43
 })
 
-db.items.insertMany([
+db.<collections>.insertMany([
     {
         name: "iphone 13 pro max",
         price: 70000,
@@ -43,33 +43,33 @@ db.items.insertMany([
 
 
 
-db.items.find()
+db.<collections>.find()
 
-db.items.find({ price: 30000, sold: 30000 })
+db.<collections>.find({ price: 30000, sold: 30000 })
 
-db.items.find({ rating: {$gte: 4.5} })
-db.items.find({ rating: {$gt: 4.5} })
+db.<collections>.find({ rating: {$gte: 4.5} })
+db.<collections>.find({ rating: {$gt: 4.5} })
 
-db.items.find({rating: {$gt:4.5}, price: {$lt: 50000}})
+db.<collections>.find({rating: {$gt:4.5}, price: {$lt: 50000}})
 
-db.items.find({ $or: [ {rating: {$gt:4.5}}, {price: {$lt: 50000}} ] })
+db.<collections>.find({ $or: [ {rating: {$gt:4.5}}, {price: {$lt: 50000}} ] })
 
-db.items.find({}, {rating: 1})
-db.items.find({ rating: {$gt: 4.5} }, {rating: 1})
-db.items.find({ rating: {$gt: 4.5} }, {rating: 1 , price: 1})
-
-
-
-
-db.items.deleteOne({price: {$gt: 50000}})
-
-db.items.deleteMany({price: {$gt: 50000}})
-
-db.item.deleteMany({})
+db.<collections>.find({}, {rating: 1})
+db.<collections>.find({ rating: {$gt: 4.5} }, {rating: 1})
+db.<collections>.find({ rating: {$gt: 4.5} }, {rating: 1 , price: 1})
 
 
 
 
-db.items.updateOne({name: "poco f4"}, {$set: {price: 2}})
+db.<collections>.deleteOne({price: {$gt: 50000}})
 
-db.items.updateMany({name: "poco f4"}, {$set: {price: 2, rating: 0.5}})
+db.<collections>.deleteMany({price: {$gt: 50000}})
+
+db.<collections>.deleteMany({})
+
+
+
+
+db.<collections>.updateOne({name: "poco f4"}, {$set: {price: 2}})
+
+db.<collections>.updateMany({name: "poco f4"}, {$set: {price: 2, rating: 0.5}})
