@@ -1,6 +1,7 @@
 
 show dbs
 use arry
+db.dropDatabase()
 show collections
 
 db.<collections>.insert({ })                               // deprecated
