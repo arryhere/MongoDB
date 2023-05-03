@@ -1,0 +1,67 @@
+
+• mongodb
+• mongosh
+
+• show dbs
+• use server
+• show collections
+• db.dropDatabase()
+• cls
+• exit
+• 
+
+
+
+• db.users.insertOne({name: "Divya", age: 23, address: {country: "India", state: "Mumbai"}})
+• db.users.insertMany([ {name: "Ankit"}, {name: "Vivek"} ])
+• 
+
+• db.users.find()
+• db.users.find({})
+• db.users.find({}, {})
+• db.users.find().limit(2)
+• db.users.find().sort({name: 1<asc> | -1<desc>})
+• db.users.find().sort({age: -1<desc>, name: 1<asc>})
+• db.users.find().skip(2)
+• db.users.find({name: "Arijit"})
+• db.users.find({}, {name: 1, age: 1, _id: 0})
+• db.users.find({}, {_id: 0})
+• db.users.find({name: {$eq: "Ankit"}})
+• db.users.find({name: {$ne: "Ankit"}})
+• db.users.find({age: {$eq: null}})
+• db.users.find({age: {$gt: 22}})
+• db.users.find({age: {$gte: 22}})
+• db.users.find({name: {$in: ["Arijit", "Ankit"]}})
+• db.users.find({name: {$nin: ["Arijit", "Ankit"]}})
+• db.users.find({age: {$exists: true}})
+• db.users.find({age: {$exists: true, $ne: null}})
+• db.users.find({age: {$gt: 20, $lt: 45}}, {_id: 0, name: 1, age: 1})
+• db.users.find({age: {$gt: 20, $lt: 45}, name: {$eq: "Arijit"}}, {_id: 0, name: 1, age: 1})
+• db.users.find({$and: [{age: {$gt: 20, $lt: 45}}, {name: {$eq: "Arijit"}}]}, {_id: 0, name: 1, age: 1})
+• db.users.find({$or: [{name: {$eq: "Arijit"}}, {age: {$lt: 20}}]}, {_id: 0, name: 1, age: 1})
+• db.users.find({name: {$ne: "Arijit"}}, {})
+• db.users.find({name: {$not: {$eq: "Arijit"}}}, {})
+• db.users.find({$expr: {$gt: ["$salary", "$expenditure"]}}, {})
+• db.users.find({"address.country": {$eq: "India"}}, {_id: 0})
+• db.users.find({"address.country": {$ne: "India"}}, {_id: 0})
+• db.users.find({$or: [{"address.country": "USA"}, {"address.country": "India"}]}, {_id: 0})
+• db.users.findOne({"address.country": "India"}, {_id: 0})
+• db.users.countDocuments({"address.country": "India"}, {_id: 0})
+• db.users.estimatedDocumentCount()
+• 
+
+• db.users.updateOne({name: "Arijit"}, {$set: {name: "Arry"}})
+• db.users.updateOne({name: "Arry"}, {$inc: {age: 10}})
+• db.users.updateOne({name: "Arry"}, {$rename: {name: "firstName"}})
+• db.users.updateOne({name: "Arry"}, {$unset: {name: ""}})
+• db.users.updateOne({name: "Arry"}, {$push: {hobbies: "running"}})
+• db.users.updateOne({name: "Arry"}, {$pull: {hobbies: "running"}})
+• db.users.updateMany({age: {$exists: true}}, {$unset: {age: ""}})
+• 
+
+• db.users.replaceOne({name: "Arry"}, {name: "Andrew"})
+• 
+
+• db.users.deleteOne({name: "Arry"})
+• db.users.deleteMany({$or: [{salary: {$gt: 7000}}, {expenditure: {$lt: 2000}}]})
+• 

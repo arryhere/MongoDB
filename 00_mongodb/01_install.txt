@@ -1,0 +1,10 @@
+
+• MongoDB install paths
+
+• C:\Program Files\MongoDB\Server\6.0\bin
+• C:\Program Files\mongosh\
+• c:\data\db
+
+• mongod    -> mongodb database service
+• mongosh   -> mongodb shell
+• 
