@@ -2,15 +2,16 @@
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "nodenext",
-    "target": "ES2020",
     "strict": true,
+    "target": "ES2020",
     "sourceMap": true,
     "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"],
   "ts-node": {
     "esm": true
   },
-  "include": [
-    "src/**/*"
-  ]
 }

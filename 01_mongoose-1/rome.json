@@ -14,7 +14,8 @@
     "enabled": true,
     "ignore": [],
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "suspicious": { "noExplicitAny": "off" }
     }
   },
   "javascript": {
