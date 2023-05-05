@@ -63,7 +63,7 @@ export class AuthorController {
         return res.status(400).json({ success: true, data: response, message: 'Author not found', error: null });
       }
 
-      const updateResponse = await AuthorModel.updateOne({ id: response.id }, { name });
+      const updateResponse = await AuthorModel.updateOne({ _id: response._id }, { name });
 
       return res.status(200).json({ success: true, data: updateResponse, message: 'Author update success', error: null });
     } catch (error: any) {

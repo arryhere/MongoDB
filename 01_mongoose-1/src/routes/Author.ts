@@ -6,6 +6,6 @@ const authorController = new AuthorController();
 
 AuthorRouter.post('/create', authorController.createAuthor);
 AuthorRouter.get('/get/:authorId', authorController.readAuthor);
-AuthorRouter.get('/get/all', authorController.readAllAuthor);
+AuthorRouter.get('/getAll', authorController.readAllAuthor);
 AuthorRouter.patch('/update/:authorId', authorController.updateAuthor);
 AuthorRouter.delete('/delete/:authorId', authorController.deleteAuthor);

@@ -29,7 +29,7 @@ async function server() {
 
     /* server start */
     app.listen(port, () => {
-      console.log(`pretaa-applewatch: 🚀 server running: ${host}:${port}`);
+      console.log(`server: 🚀 server running: http://${host}:${port}`);
     });
   } catch (error: any) {
     console.log('server: ⚠️ server error');
